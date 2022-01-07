@@ -1,0 +1,14 @@
+{
+  "name": "my-electron-app",
+  "version": "1.0.0",
+  "main": "main.js",
+  "repository": "Eu",
+  "license": "MIT",
+  "devDependencies": {
+    "electron": "^16.0.6",
+    "electron-reloader": "^1.2.1"
+  },
+  "scripts": {
+    "start": "electron ."
+  }
+}
