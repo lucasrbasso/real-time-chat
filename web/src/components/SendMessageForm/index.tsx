@@ -45,7 +45,7 @@ export const SendMessageForm = () => {
         <textarea
           name="message"
           id="message"
-          placeholder="Qual sua expectativa para o evento?"
+          placeholder="Digite uma mensagem"
           onChange={(event) => setMessage(event.target.value)}
           value={message}
         />
