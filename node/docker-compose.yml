@@ -1,0 +1,13 @@
+version: "3.8"
+
+services:
+  mysql:
+    image: mysql:8.0.27
+    container_name: mysql-messages
+    ports:
+      - 3306:3306
+    environment:
+      MYSQL_USER: lucas
+      MYSQL_PASSWORD: lucas
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: ms-messages

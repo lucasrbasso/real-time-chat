@@ -3,8 +3,8 @@ generator client {
 }
 
 datasource db {
-  provider = "sqlite"
-  url      = "file:./dev.db"
+  provider = "mysql"
+  url      = env("DATABASE_URL")
 }
 
 model User {
@@ -14,8 +14,8 @@ model User {
   avatar_url String
   login      String
 
-  @@map("users")
   messages Message[]
+  @@map("users")
 }
 
 model Message {
@@ -24,6 +24,6 @@ model Message {
   created_at DateTime @default(now())
   user       User     @relation(fields: [user_id], references: [id])
 
-  @@map("messages")
   user_id String
+  @@map("messages")
 }

@@ -16,10 +16,11 @@ interface MessageProps {
 
 const messagesQueue: MessageProps[] = [];
 
-const socket = io('http://localhost:3333');
+const socket = io('http://localhost:4000');
 
 socket.on('new_message', (newMessage: MessageProps) => {
   messagesQueue.push(newMessage);
+  console.log(newMessage);
 });
 
 export const MessageList = () => {
@@ -33,7 +34,7 @@ export const MessageList = () => {
         );
       }
       messagesQueue.shift();
-    }, 2000);
+    }, 1000);
   }, []);
 
   useEffect(() => {
